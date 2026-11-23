@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/pagehosting11/cnnlendar/main/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cnnlendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<body>
+    <main class="app-layout">
+
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <h1>calendar</h1>
+                <p>for homework</p>
+            </div>
+
+            <div id="sidebarControls"></div>
+
+            <div class="sidebar-section">
+                <h3>NEXT DUE</h3>
+                <div id="upcomingEvents">
+                    <p class="empty-message">No upcoming events</p>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                School Calendar
+            </div>
+        </aside>
+
+        <section class="main-content">
+            <div class="calendar-container">
+
+                <div class="calendar-header">
+                    <button id="previousMonth">&lt;</button>
+                    <h2 id="monthYear"></h2>
+                    <button id="nextMonth">&gt;</button>
+                </div>
+
+                <div class="weekdays">
+                    <div>MON</div>
+                    <div>TUE</div>
+                    <div>WED</div>
+                    <div>THU</div>
+                    <div>FRI</div>
+                    <div>SAT</div>
+                    <div>SUN</div>
+                </div>
+
+                <div id="calendar"></div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="eventOverlay" class="overlay">
+        <div class="event-box">
+            <button id="closeEvent" class="close-button">×</button>
+
+            <h2 id="selectedDate"></h2>
+
+            <label for="eventType">Type</label>
+            <select id="eventType">
+                <option value="HW">Homework</option>
+                <option value="PROJECT">Project</option>
+                <option value="PRACTICE">Practice</option>
+                <option value="EXAM">Exam</option>
+                <option value="EVENT">Event</option>
+            </select>
+
+            <label for="eventTitle">Title</label>
+            <input id="eventTitle" type="text"
+                placeholder="Example: Math homework">
+
+            <label for="eventDescription">Description</label>
+            <textarea id="eventDescription"
+                placeholder="Add details..."></textarea>
+
+            <button id="saveEvent" class="save-button">SAVE</button>
+        </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
